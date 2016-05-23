@@ -1,0 +1,47 @@
+{
+  "name": "nih-mimesniff",
+  "version": "0.0.1",
+  "author": "Yolijn <yolijn@frameless.io>",
+  "description": "[WIP] Implementation of MIME Sniffing, the Living Standard.",
+  "homepage": "https://wesaynih.com/package/nih-mimesniff",
+  "maintainers": [
+    {
+      "name": "The Knights Who Say NIH!",
+      "url": "https://wesaynih.com/"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Yolijn",
+      "url": "http://yolijn.com/"
+    },
+    {
+      "name": "Robbert Broersma",
+      "url": "http://robbertbroersma.nl/"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wesaynih/nih-mimesniff"
+  },
+  "bugs": {
+    "url": "https://github.com/wesaynih/nih-mimesniff/issues"
+  },
+  "keywords": [
+    "mime",
+    "media",
+    "content",
+    "sniffing",
+    "mimesniff",
+    "rfc6838"
+  ],
+  "license": "SEE LICENSE IN license.txt",
+  "private": true,
+  "engines": {
+    "node": ">=4.2.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "minimal-file": "git://github.com/robbert/minimal-file.git"
+  }
+}
