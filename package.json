@@ -41,5 +41,7 @@
     "node": ">=4.2.0"
   },
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "minimal-file": "git://github.com/robbert/minimal-file.git"
+  }
 }
