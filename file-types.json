@@ -1,0 +1,355 @@
+[
+  {
+    "type": "image/x-icon",
+    "files": [
+      "ico.ico"
+    ],
+    "todo": [
+      "cur.cur"
+    ]
+  },
+  {
+    "type": "image/bmp",
+    "files": [
+      "bmp.bmp"
+    ],
+    "todo": [
+      "bm.bm"
+    ]
+  },
+  {
+    "type": "image/gif",
+    "files": [
+      "gif-transparent.gif",
+      "gif.gif"
+    ]
+  },
+  {
+    "type": "image/webp",
+    "files": [
+      "webp.webp"
+    ]
+  },
+  {
+    "type": "image/png",
+    "files": [
+      "png-transparent.png"
+    ],
+    "todo": [
+      "x-png.x-png"
+    ]
+  },
+  {
+    "type": "image/jpeg",
+    "files": [
+      "jpeg.jpg"
+    ],
+    "todo": [
+      "jfif.jfif",
+      "jfif-tbnl.jfif-tbnl",
+      "jpeg.jpeg"
+    ]
+  },
+  {
+    "type": "audio/basic",
+    "files": [],
+    "todo": [
+      "snd.snd",
+      "au.au"
+    ]
+  },
+  {
+    "type": "audio/aiff",
+    "files": [],
+    "todo": [
+      "aif.aif",
+      "aifc.aifc",
+      "aiff.aiff"
+    ]
+  },
+  {
+    "type": "audio/mpeg",
+    "files": [],
+    "todo": [
+      "m2a.m2a",
+      "m3a.m3a",
+      "mp2.mp2",
+      "mp2a.mp2a",
+      "mp3.mp3",
+      "mpa.mpa",
+      "mpg.mpg",
+      "mpga.mpga"
+    ]
+  },
+  {
+    "type": "audio/midi",
+    "files": [],
+    "todo": [
+      "mid.mid",
+      "midi.midi",
+      "kar.kar",
+      "rmi.rmi"
+    ]
+  },
+  {
+    "type": "audio/wave",
+    "files": [
+      "wav.wav"
+    ]
+  },
+  {
+    "type": "video/avi",
+    "files": [],
+    "todo": [
+      "avi.avi"
+    ]
+  },
+  {
+    "type": "video/mp4",
+    "files": [
+      "mp4.mp4"
+    ],
+    "todo": [
+      "mp4v.mp4v",
+      "mpg4.mpg4"
+    ]
+  },
+  {
+    "type": "video/webm",
+    "files": [
+      "webm.webm"
+    ]
+  },
+  {
+    "type": "application/ogg",
+    "files": [],
+    "todo": [
+      "ogx.ogx"
+    ]
+  },
+  {
+    "type": "application/font-ttf",
+    "files": [],
+    "todo": [
+      "ttf.ttf",
+      "ttc.ttc"
+    ]
+  },
+  {
+    "type": "application/font-cff",
+    "files": []
+  },
+  {
+    "type": "application/font-off",
+    "files": []
+  },
+  {
+    "type": "application/font-sfnt",
+    "files": []
+  },
+  {
+    "type": "application/vnd.ms-opentype",
+    "files": []
+  },
+  {
+    "type": "application/font-woff",
+    "files": [],
+    "todo": [
+      "woff.woff",
+      "woff2.woff2"
+    ]
+  },
+  {
+    "type": "application/vnd.ms-fontobject",
+    "files": [],
+    "todo": [
+      "eot.eot"
+    ]
+  },
+  {
+    "type": "application/zip",
+    "files": [],
+    "todo": [
+      "zip.zip"
+    ]
+  },
+  {
+    "type": "application/x-rar-compressed",
+    "files": [],
+    "todo": [
+      "rar.rar"
+    ]
+  },
+  {
+    "type": "application/x-gzip",
+    "files": [],
+    "todo": [
+      "gz.gz",
+      "gzip.gzip"
+    ]
+  },
+  {
+    "type": "text/xml",
+    "files": [
+      "xml-1.0-valid.xml",
+      "xml-1.1-valid.xml",
+      "xml-1.0.xml",
+      "xml-1.1.xml"
+    ]
+  },
+  {
+    "type": "application/xml",
+    "files": [
+      "xml-1.0-valid.xml",
+      "xml-1.1-valid.xml",
+      "xml-1.0.xml",
+      "xml-1.1.xml"
+    ],
+    "todo": [
+      "xsl.xsl",
+      "xsd.xsd",
+      "rng.rng"
+    ]
+  },
+  {
+    "type": "application/rss+xml",
+    "files": [],
+    "todo": [
+      "rss.rss"
+    ]
+  },
+  {
+    "type": "application/atom+xml",
+    "files": [],
+    "todo": [
+      "atom.atom"
+    ]
+  },
+  {
+    "type": "text/html",
+    "files": [
+      "html-2.0.html",
+      "html-4.01-transitional.html",
+      "html-3.2.html",
+      "html5.html",
+      "html-4.0-strict.html",
+      "iso-html.html",
+      "html-4.01-frameset.html",
+      "xhtml-1.0-frameset.html",
+      "html-4.01-strict.html"
+    ],
+    "todo": [
+      "acgi.acgi",
+      "htm.htm",
+      "htmls.htmls",
+      "htx.htx",
+      "shtml.shtml"
+    ]
+  },
+  {
+    "type": "application/pdf",
+    "files": [],
+    "todo": [
+      "pdf.pdf"
+    ]
+  },
+  {
+    "type": "application/postscript",
+    "files": [],
+    "todo": [
+      "ai.ai",
+      "eps.eps",
+      "ps.ps"
+    ]
+  },
+  {
+    "type": "text/plain",
+    "files": [
+      "c.c",
+      "fortran-77.f",
+      "fortran-90.f90",
+      "java.java",
+      "objective-c.m",
+      "perl.pl"
+    ],
+    "todo": [
+      "c++.c++",
+      "cc.cc",
+      "com.com",
+      "conf.conf",
+      "cxx.cxx",
+      "def.def",
+      "for.for",
+      "g.g",
+      "h.h",
+      "hh.hh",
+      "idc.idc",
+      "jav.jav",
+      "list.list",
+      "log.log",
+      "lst.lst",
+      "mar.mar",
+      "sdml.sdml",
+      "text.text",
+      "txt.txt"
+    ]
+  },
+  {
+    "type": "application/octet-stream",
+    "files": [
+      "elf.o"
+    ],
+    "todo": [
+      "a.a",
+      "arc.arc",
+      "arj.arj",
+      "bin.bin",
+      "bpk.bpk",
+      "buffer.buffer",
+      "com.com",
+      "deb.deb",
+      "deploy.deploy",
+      "dist.dist",
+      "distz.distz",
+      "dll.dll",
+      "dmg.dmg",
+      "dms.dms",
+      "dump.dump",
+      "elc.elc",
+      "exe.exe",
+      "img.img",
+      "iso.iso",
+      "lha.lha",
+      "lhx.lhx",
+      "lrf.lrf",
+      "lzh.lzh",
+      "lzx.lzx",
+      "mar.mar",
+      "msi.msi",
+      "msm.msm",
+      "msp.msp",
+      "pkg.pkg",
+      "psd.psd",
+      "saveme.saveme",
+      "so.so",
+      "uu.uu",
+      "zoo.zoo"
+    ]
+  },
+  {
+    "type": "text/vtt",
+    "files": [],
+    "todo": [
+      "vtt.vtt"
+    ]
+  },
+  {
+    "type": "text/cache-manifest",
+    "files": [
+      "manifest.appcache"
+    ],
+    "todo": [
+      "manifest.manifest"
+    ]
+  }
+]
