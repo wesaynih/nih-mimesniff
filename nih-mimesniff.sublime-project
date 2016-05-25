@@ -20,7 +20,6 @@
         ".hg",
         ".svn",
         "dist",
-        "node_modules",
         "tmp"
       ],
       "path": "."

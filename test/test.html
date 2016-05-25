@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>NIH mimesniff tests</title>
+<body>
+<script src="../externs/lodash.core.js"></script>
+<ul id='listTypes'></ul>
+<script type="text/javascript">
+    'use strict';
+    var fileTypes = new Request('file-types.json'),
+        testFilePath = '../node_modules/minimal-file/';
+
+    var tests = fetch(fileTypes).then(function (response)
+    {
+        return response.json();
+    });
+
+    tests = tests.then(function (json)
+    {
+        var arr, fetchTestFiles, mimeTypes, listItem, i;
+        var listTypes = document.getElementById('listTypes');
+
+        // Filter to return tests with testfiles
+        arr = _.filter(json, function (test)
+        {
+            return !!test.files && test.files.length > 0;
+        });
+
+        // Create fetch for first file per mime type
+        fetchTestFiles = _.flatten(_.map(arr, function (test)
+        {
+            // return fetch(testFilePath + test.files[0]).then(req => req.arrayBuffer());
+            return fetch(testFilePath + test.files[0]).then(req => req.arrayBuffer());
+        }));
+
+        // List all mime types with excisting testfiles
+        mimeTypes = _.map(arr, 'type');
+
+        for (i = 0; i < mimeTypes.length; i++)
+        {
+            listItem = document.createElement('li');
+            listItem.textContent = mimeTypes[i];
+            listTypes.appendChild(listItem);
+        }
+
+        Promise.all(fetchTestFiles)
+            .then(function (buffers) {
+                var byteBuffers = buffers.map(buffer => new Uint8Array(buffer));
+                console.log(byteBuffers);
+                byteBuffers.forEach(function (bytes) {
+                    console.log(sniff(bytes));
+                })
+            })
+
+        // For each mimetype, find fetched test-file and Uint8Array
+    });
+
+/**
+ * @param {Uint8Array} bytes
+ * @return {string}
+ */
+function sniff(bytes)
+{
+    var type;
+    if (bytes[0] === 0x47 
+     && bytes[1] === 0x49
+     && bytes[2] === 0x46
+     && bytes[3] === 0x38 
+     &&(bytes[4] === 0x37 || bytes[4] === 0x39)
+     && bytes[5] === 0x61)
+    {
+        type = 'image/gif';
+    }
+    else if (bytes[0] === 0x00 
+          && bytes[1] === 0x00
+          &&(bytes[2] === 0x01 || bytes[2] === 0x02)
+          && bytes[3] === 0x00)
+    {
+        type = 'image/x-icon';
+    }
+    else if (bytes[0] === 0x42 && bytes[1] === 0x4D)
+    {
+        type = 'image/bmp';
+    }
+    else if (bytes[0] === 0x52
+          && bytes[1] === 0x49
+          && bytes[2] === 0x46
+          && bytes[3] === 0x46
+          && bytes[8] === 0x57
+          && bytes[9] === 0x45
+          && bytes[10] === 0x42
+          && bytes[11] === 0x50
+          && bytes[12] === 0x56
+          && bytes[13] === 0x50)
+    {
+        type = 'image/webp';
+    }
+    else if (bytes[0] === 0x89
+          && bytes[1] === 0x50
+          && bytes[2] === 0x4E
+          && bytes[3] === 0x47
+          && bytes[4] === 0x0D
+          && bytes[5] === 0x0A
+          && bytes[6] === 0x1A
+          && bytes[7] === 0x0A)
+    {
+        type = 'image/png';
+    }
+    else if (bytes[0] === 0xFF && bytes[1] === 0xD8 && bytes[2] === 0xFF)
+    {
+        type = 'image/jpeg';
+    }
+    else if (bytes[0] === 0x52 
+          && bytes[1] === 0x49
+          && bytes[2] === 0x46
+          && bytes[3] === 0x46
+          && bytes[8] === 0x57
+          && bytes[9] === 0x41
+          && bytes[10] === 0x56
+          && bytes[11] === 0x45)
+    {
+        type = 'audio/wave';
+    }
+    else if (bytes[0] === 0x3C
+          && bytes[1] === 0x3F
+          && bytes[2] === 0x78
+          && bytes[3] === 0x6D
+          && bytes[4] === 0x6C)
+    {
+        type = 'text/xml';
+    }
+    else if (bytes[0] === 0x74
+          && bytes[1] === 0x65
+          && bytes[2] === 0x78
+          && bytes[3] === 0x74
+          && bytes[4] === 0x2F
+          && bytes[5] === 0x70
+          && bytes[6] === 0x6C
+          && bytes[7] === 0x61
+          && bytes[8] === 0x69
+          && bytes[9] === 0x6E)
+    {
+        type = 'text/plain';
+    }
+    else
+    {
+        type = 'application/octet-stream';
+    }
+
+    return type;
+}
+
+</script>
+</body>
