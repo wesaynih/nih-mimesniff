@@ -158,9 +158,9 @@ var sniff = (function ()
     */
     function sniffy(bytes)
     {
-        var i, ii, ftType, mime,
+        var i, ii, fbType, mime,
             match = false,
-            falltrough = ['text/plain', 'text/plain option2'],
+            fallback = ['text/plain', 'text/plain option2'],
 
             // Set mimeType to application/octet-stream as a last resort
             mimeType = 'application/octet-stream',
@@ -293,8 +293,8 @@ var sniff = (function ()
             {
                 mime = bytePatterns[mimeType];
 
-                // Exclude falltrough mimeTypes from this first set of tests
-                if (falltrough.indexOf(mimeType) === -1)
+                // Exclude fallback mimeTypes from this first set of tests
+                if (fallback.indexOf(mimeType) === -1)
                 {
                     match = isMime(mime);
                     if (match)
@@ -304,16 +304,16 @@ var sniff = (function ()
                     }
                 }
 
-                // Test if one of the falltrough mimeTypes matches
+                // Test if one of the fallback mimeTypes matches
                 if (!match)
                 {
-                    for (i = 0; i < falltrough.length; i++)
+                    for (i = 0; i < fallback.length; i++)
                     {
-                        ftType = bytePatterns[falltrough[i]];
-                        match = isMime(ftType);
+                        fbType = bytePatterns[fallback[i]];
+                        match = isMime(fbType);
                         if (match)
                         {
-                            mimeType = ftType;
+                            mimeType = fbType;
                         }
                     }
                 }
