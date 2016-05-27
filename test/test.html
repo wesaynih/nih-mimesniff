@@ -49,7 +49,7 @@
                 var byteBuffers = buffers.map(buffer => new Uint8Array(buffer));
                 console.log(byteBuffers);
                 byteBuffers.forEach(function (bytes) {
-                    console.log(sniff(bytes));
+                    console.log("result: ", sniff(bytes));
                 })
             })
 
